@@ -1,8 +1,8 @@
-import Hero from "../components/Hero";
-import LiveMatchStats from "../components/LiveMatchStats";
-import MetaSection from "../components/MetaSection";
-import NavBar from "../components/NavBar";
-import NewsSection from "../components/NewsSection";
+import Hero from "../components/Dashboard/HeroSection";
+import LiveMatchStats from "../components/Dashboard/LiveMatchStats";
+import MetaSection from "../components/Dashboard/MetaSection";
+import NavBar from "../components/Dashboard/NavBar";
+import NewsSection from "../components/Dashboard/NewsSection";
 
 const Dashboard = () => {
   return (
