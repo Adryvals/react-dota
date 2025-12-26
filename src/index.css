@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --dark: class;
+  
+  /* Colores personalizados */
+  --color-primary: #135bec;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #101622;
+  --color-card-dark: #1c1f27;
+  --color-border-dark: #282e39;
+  --color-dark: #111318;
+  --color-darklight: #1c1f27;
+  --color-darkblue: #3b4354;
+  --color-slate-900: #0f172a;
+  --color-news-section: #0d1015;
+  --color-news-esports: #0bda5e;
+  
+  /* Tipografías */
+  --font-family-display: "Space Grotesk", sans-serif;
+  --font-family-body: "Noto Sans", sans-serif;
+  
+  /* Border radius */
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  /*Backgrounds*/
+  --background-image-hero: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&amp;w=2670&amp;auto=format&amp;fit=crop');
+  --background-dark: background-color: rgb(16 22 34 / var(--tw-bg-opacity, 1));
+}
