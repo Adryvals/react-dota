@@ -1,7 +1,7 @@
 import HeaderSection from "../components/Heroes/HeaderSection"
 import HeroAbilities from "../components/Heroes/HeroAbilities"
 import HeroGamesStats from "../components/Heroes/HeroGamesStats"
-import { ABILITIES_URL, ITEMS_URL } from "../data/apiData"
+import { ITEMS_URL } from "../data/apiData"
 
 export const HeroData = () => {
     return (
