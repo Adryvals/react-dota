@@ -36,7 +36,7 @@ const articleList : NewsArticlesProps[] = [
     },
 ] 
 
-const Article = ({name, linkName, url, img, altImg, content, type, publishedAt}: NewsArticlesProps) => {
+const Article = ({name, linkName, img, altImg, content, type, publishedAt}: NewsArticlesProps) => {
     return (
         <article className="flex flex-col sm:flex-row gap-6 p-6 rounded-xl bg-card-dark border border-border-dark hover:border-primary/30 transition-all group cursor-pointer">
             <div className="w-full sm:w-48 aspect-video rounded-lg overflow-hidden bg-gray-800 shrink-0 relative">
