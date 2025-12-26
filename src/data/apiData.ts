@@ -1,3 +1,8 @@
+export const DOTA_URL = 'https://cdn.steamstatic.com/apps/dota2/images/dota_react/';
+export const HEROES_URL = DOTA_URL + 'heroes/'; 
+export const ABILITIES_URL = DOTA_URL + 'abilities/';
+export const ITEMS_URL = DOTA_URL + 'items/';
+
 export const API_HEROS = [
   {
     "id": 1,

@@ -1,8 +1,9 @@
-import { heroData, type HeroData } from "../data/hero";
+import { Link } from "react-router-dom";
+import { heroData, type HeroData } from "../../data/hero";
 
 const heroList:HeroData[] = heroData;
 
-const HeroCard = ({name, winrate, imgUrl, altImg} : HeroData) => {
+const HeroCard = ({name, winrate, imgUrl, altImg, url} : HeroData) => {
     return (
           <div className="flex gap-4 rounded-xl border border-border-dark bg-card-dark p-4 items-center hover:bg-[#232730] transition-colors group cursor-pointer">
             <div className="relative size-16 shrink-0 rounded-lg overflow-hidden border border-gray-700 group-hover:border-primary transition-colors">
@@ -14,7 +15,7 @@ const HeroCard = ({name, winrate, imgUrl, altImg} : HeroData) => {
               </div>
               <div className="flex flex-col flex-1">
               <h2 className="text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">
-                  {name}
+                  <Link to={url}> {name} </Link>
               </h2>
               <div className="flex items-center gap-2 mt-1">
                   <span className="text-[#0bda5e] text-sm font-bold">
@@ -53,7 +54,7 @@ const MetaSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {
                 heroList && heroList.map((hero) => (
-                    <HeroCard attribute={hero.attribute} name={hero.name} altImg={hero.altImg} imgUrl={hero.imgUrl} winrate={hero.winrate} key={hero.name} />
+                    <HeroCard attribute={hero.attribute} name={hero.name} altImg={hero.altImg} imgUrl={hero.imgUrl} winrate={hero.winrate} url={hero.url} key={hero.name} />
                 ))
             }
           </div>
