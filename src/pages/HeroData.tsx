@@ -3,13 +3,12 @@ import HeroAbilities from "../components/Heroes/HeroAbilities"
 import HeroAttributes from "../components/Heroes/HeroAttributes"
 import HeroGamesStats from "../components/Heroes/HeroGamesStats"
 import HeroItems from "../components/Heroes/HeroItems"
-import HeroLore from "../components/Heroes/HeroLore"
 import HeroTalentTree from "../components/Heroes/HeroTalentTree"
 
 export const HeroData = () => {
     return (
         <div className="layout-container flex h-full grow flex-col items-center bg-background-dark text-slate-900 dark:text-white overflow-x-hidden">
-            <div className="w-full flex flex-col px-4 md:px-6 py-6 gap-6">
+            <div className="w-full flex flex-col px-4 md:px-6 py-6 gap-2">
                 
                 {/* <!-- Hero Header Section --> */}
                 <HeaderSection />
@@ -18,10 +17,10 @@ export const HeroData = () => {
                 <HeroGamesStats />
                 
                 {/* <!-- Main Content Grid --> */}
-                <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 xl:grid-cols-3 gap-2">
 
                     {/* <!-- Left Column (2/3 width on large screens) --> */}
-                    <div className="xl:col-span-2 flex flex-col gap-8">
+                    <div className="xl:col-span-2 flex flex-col gap-3">
 
                         {/* <!-- Attributes Section --> */}
                         <HeroAttributes />
@@ -32,16 +31,13 @@ export const HeroData = () => {
                     </div>
 
                     {/* <!-- Right Column (1/3 width) --> */}
-                    <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-3">
 
                         {/* <!-- Talent Tree</div> --> */}
                         <HeroTalentTree/>
 
                         {/* <!-- Popular Items --> */}
                         <HeroItems />
-
-                        {/* <!-- Small Lore Widget --> */}
-                        <HeroLore />
                     </div>
                 </div>
             </div>
