@@ -2,6 +2,25 @@ export const DOTA_URL = 'https://cdn.steamstatic.com/apps/dota2/images/dota_reac
 export const HEROES_URL = DOTA_URL + 'heroes/'; 
 export const ABILITIES_URL = DOTA_URL + 'abilities/';
 export const ITEMS_URL = DOTA_URL + 'items/';
+export const ATTRIBUTE_URL = DOTA_URL + 'icons/'
+
+export const HERO_ATTRIBUTE_URL = 
+{
+  AGILITY: ATTRIBUTE_URL + "hero_agility.png",
+  STRENGTH: ATTRIBUTE_URL + "hero_strength.png",
+  INTELLIGENCE: ATTRIBUTE_URL + "hero_intelligence.png",
+  UNIVERSAL: ATTRIBUTE_URL + "hero_universal.png",
+}
+
+export const HERO_ATTRIBUTE = 
+{
+  AGILITY: "Agility",
+  STRENGTH: "Strength",
+  INTELLIGENCE: "Intelligence",
+  UNIVERSAL: "Universal",
+}
+
+export const HERO_ANIMATION = "https://cdn.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/"
 
 export const API_HEROS = [
   {
