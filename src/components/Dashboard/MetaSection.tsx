@@ -3,7 +3,7 @@ import { heroData, type HeroData } from "../../data/hero";
 
 const heroList:HeroData[] = heroData;
 
-const HeroCard = ({name, winrate, imgUrl, altImg, url} : HeroData) => {
+const HeroCard = ({name, winrate, imgUrl, altImg} : HeroData) => {
     return (
           <div className="flex gap-4 rounded-xl border border-border-dark bg-card-dark p-4 items-center hover:bg-[#232730] transition-colors group cursor-pointer">
             <div className="relative size-16 shrink-0 rounded-lg overflow-hidden border border-gray-700 group-hover:border-primary transition-colors">
@@ -15,16 +15,16 @@ const HeroCard = ({name, winrate, imgUrl, altImg, url} : HeroData) => {
               </div>
               <div className="flex flex-col flex-1">
               <h2 className="text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">
-                  <Link to={url}> {name} </Link>
+                  <Link to={`/heroes/${name}`}> {name} </Link>
               </h2>
               <div className="flex items-center gap-2 mt-1">
-                  <span className="text-[#0bda5e] text-sm font-bold">
+                  <span className="text-news-esports text-sm font-bold">
                   {winrate}%
                   </span>
                   <span className="text-gray-500 text-xs">Win Rate</span>
               </div>
               <div className="w-full h-1 bg-gray-700 rounded-full mt-2 overflow-hidden">
-                  <div className="h-full bg-[#0bda5e] w-[56.4%]"></div>
+                  <div className="h-full bg-news-esports w-[56.4%]"></div>
               </div>
             </div>
         </div>
@@ -54,7 +54,7 @@ const MetaSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {
                 heroList && heroList.map((hero) => (
-                    <HeroCard attribute={hero.attribute} name={hero.name} altImg={hero.altImg} imgUrl={hero.imgUrl} winrate={hero.winrate} url={hero.url} key={hero.name} />
+                    <HeroCard attribute={hero.attribute} name={hero.name} altImg={hero.altImg} imgUrl={hero.imgUrl} winrate={hero.winrate} key={hero.name} />
                 ))
             }
           </div>

@@ -6,7 +6,6 @@ export interface HeroData {
     attribute: 'strength' | 'agility' | "intelligence" | "universal"
     altImg: string,
     winrate: number,
-    url: string,
 }
 
 export const abaddonImg = `${HEROES_URL}abaddon.png` //'../assets/heroes/abaddon.png'
@@ -22,7 +21,6 @@ export const heroData: HeroData[] = [
         attribute: "universal",
         altImg: "Dark shadowy knight character portrait",
         winrate: 56.4,
-        url: "/heroes/abaddon"
     },
     {
         name: "Vengeful Spirit",
@@ -30,7 +28,6 @@ export const heroData: HeroData[] = [
         attribute: "agility",
         altImg: "Mystical spirit character portrait",
         winrate: 55.1,
-        url: "/heroes/vengeful-spirit"
     },
     {
         name: "Witch Doctor",
@@ -38,7 +35,6 @@ export const heroData: HeroData[] = [
         imgUrl: witchDoctorImg,
         altImg: "Tribal doctor character portrait",
         winrate: 54.8,
-        url: "/heroes/witch-doctor"
     },
     {
         name: "Wraith King",
@@ -46,7 +42,6 @@ export const heroData: HeroData[] = [
         attribute: "strength",
         altImg: "Undead king character portrait",
         winrate: 53.9,
-        url: "/heroes/wraith-king"
     },
     {
         name: "Anti-Mage",
@@ -54,6 +49,5 @@ export const heroData: HeroData[] = [
         attribute: "agility",
         altImg: "Armored swordsman character portrait",
         winrate: 53.7,
-        url: "/heroes/antimage"
     }
 ]

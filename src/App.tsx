@@ -8,7 +8,7 @@ import Footer from './components/Layout/Footer'
 
 const router = createBrowserRouter([
   {path: '/', element: <Dashboard />, errorElement: <NotFoundPage />}, 
-  {path: '/heroes/antimage', element: <HeroData />, errorElement: <NotFoundPage />}
+  {path: '/heroes/:name', element: <HeroData />, errorElement: <NotFoundPage />}
 ])
 
 function App() {

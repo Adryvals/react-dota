@@ -31,8 +31,8 @@ const NavBar = () => {
           </div>
           <div className="hidden md:flex flex-1 justify-center gap-8">
             {
-                NavItems.map((item) => (
-                    <a
+                NavItems.map((item, idx) => (
+                    <a key={idx}
                     className="text-gray-300 hover:text-white transition-colors text-sm font-medium leading-normal"
                     href={item.link}
                     >{item.name}</a>

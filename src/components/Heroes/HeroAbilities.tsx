@@ -1,6 +1,12 @@
 import { ABILITIES_URL } from "../../data/apiData"
+import type { HeroInterface } from "../../interfaces/hero"
 
-const HeroAbilities = () => {
+interface HeroAbilitiesProps {
+  hero: HeroInterface
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const HeroAbilities = ({ hero: _hero }: HeroAbilitiesProps) => {
     return (
         <section>
             <h3 className="text-white text-xl font-bold mb-4 flex items-center gap-2">

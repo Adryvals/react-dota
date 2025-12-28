@@ -5,16 +5,23 @@ import HeroGamesStats from "../components/Heroes/HeroGamesStats"
 import HeroItems from "../components/Heroes/HeroItems"
 import HeroTalentTree from "../components/Heroes/HeroTalentTree"
 
+import { useParams } from "react-router-dom"
+import { getHeroById } from "../interfaces/hero"
+
 export const HeroData = () => {
+
+
+    const params = useParams()
+    const result = getHeroById(params.name!)
+
     return (
         <div className="layout-container flex h-full grow flex-col items-center bg-background-dark text-slate-900 dark:text-white overflow-x-hidden">
             <div className="w-full flex flex-col px-4 md:px-6 py-6 gap-2">
-                
                 {/* <!-- Hero Header Section --> */}
-                <HeaderSection />
+                <HeaderSection hero={result} />
 
                 {/* <!-- Stats Bar --> */}
-                <HeroGamesStats />
+                <HeroGamesStats hero={result} />
                 
                 {/* <!-- Main Content Grid --> */}
                 <div className="grid grid-cols-1 xl:grid-cols-3 gap-2">
@@ -23,10 +30,10 @@ export const HeroData = () => {
                     <div className="xl:col-span-2 flex flex-col gap-3">
 
                         {/* <!-- Attributes Section --> */}
-                        <HeroAttributes />
+                        <HeroAttributes hero={result} />
 
                         {/* <!-- Abilities Section --> */}
-                        <HeroAbilities />
+                        <HeroAbilities hero={result} />
 
                     </div>
 
@@ -34,10 +41,10 @@ export const HeroData = () => {
                     <div className="flex flex-col gap-3">
 
                         {/* <!-- Talent Tree</div> --> */}
-                        <HeroTalentTree/>
+                        <HeroTalentTree hero={result} />
 
                         {/* <!-- Popular Items --> */}
-                        <HeroItems />
+                        <HeroItems hero={result} />
                     </div>
                 </div>
             </div>

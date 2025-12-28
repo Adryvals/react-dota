@@ -1,4 +1,11 @@
-const HeroTalentTree = () => {
+import { type HeroInterface } from "../../interfaces/hero"
+
+interface HeroTalentTreeProps {
+  hero: HeroInterface
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const HeroTalentTree = ({ hero: _hero }: HeroTalentTreeProps) => {
   return (
     <section>
       <h3 className="text-white text-xl font-bold mb-4 flex items-center gap-2">

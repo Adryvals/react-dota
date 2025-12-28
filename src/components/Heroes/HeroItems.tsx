@@ -1,6 +1,12 @@
 import { ITEMS_URL } from '../../data/apiData';
+import type { HeroInterface } from '../../interfaces/hero';
 
-const HeroItems = () => {
+interface HeroItemsProps {
+  hero: HeroInterface
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const HeroItems = ({ hero: _hero }: HeroItemsProps) => {
   return (
     <>
     <div className='flex cols-3 place-content-between gap-8'>
